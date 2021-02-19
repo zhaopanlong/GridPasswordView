@@ -33,7 +33,7 @@ import com.jungly.gridpasswordview.imebugfixer.ImeDelBugFixedEditText;
  * jungly.ik@gmail.com
  * 15/3/5 21:30
  */
-public class GridPasswordView extends LinearLayout implements PasswordView {
+public class PlateNumView extends LinearLayout implements PasswordView {
     private static final int DEFAULT_PASSWORDLENGTH = 6;
     private static final int DEFAULT_TEXTSIZE = 16;
     private static final String DEFAULT_TRANSFORMATION = "●";
@@ -58,24 +58,24 @@ public class GridPasswordView extends LinearLayout implements PasswordView {
     private OnPasswordChangedListener mListener;
     private PasswordTransformationMethod mTransformationMethod;
 
-    public GridPasswordView(Context context) {
+    public PlateNumView(Context context) {
         super(context);
         initViews(context);
         init(context, null, 0);
     }
 
-    public GridPasswordView(Context context, AttributeSet attrs) {
+    public PlateNumView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs, 0);
     }
 
-    public GridPasswordView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public PlateNumView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public GridPasswordView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public PlateNumView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr);
     }
@@ -377,6 +377,7 @@ public class GridPasswordView extends LinearLayout implements PasswordView {
         boolean currentVisible = getPassWordVisibility();
         setPasswordVisibility(!currentVisible);
     }
+
 
     /**
      * Get the visibility of this view.

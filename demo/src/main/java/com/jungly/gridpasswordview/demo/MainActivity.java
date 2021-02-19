@@ -7,31 +7,32 @@ import android.util.Log;
 import android.widget.Spinner;
 
 import com.jungly.gridpasswordview.GridPasswordView;
+import com.jungly.gridpasswordview.OnPasswordChangedListener;
 import com.jungly.gridpasswordview.PasswordType;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnCheckedChanged;
 import butterknife.OnItemSelected;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    @InjectView(R.id.gpv_normal)
+    @BindView(R.id.gpv_normal)
     GridPasswordView gpvNormal;
-    @InjectView(R.id.gpv_length)
+    @BindView(R.id.gpv_length)
     GridPasswordView gpvLength;
-    @InjectView(R.id.gpv_transformation)
+    @BindView(R.id.gpv_transformation)
     GridPasswordView gpvTransformation;
-    @InjectView(R.id.gpv_passwordType)
+    @BindView(R.id.gpv_passwordType)
     GridPasswordView gpvPasswordType;
-    @InjectView(R.id.gpv_customUi)
+    @BindView(R.id.gpv_customUi)
     GridPasswordView gpvCustomUi;
-    @InjectView(R.id.gpv_normail_twice)
+    @BindView(R.id.gpv_normail_twice)
     GridPasswordView gpvNormalTwice;
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @InjectView(R.id.pswtype_sp)
+    @BindView(R.id.pswtype_sp)
     Spinner pswtypeSp;
 
     boolean isFirst = true;
@@ -41,7 +42,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         setSupportActionBar(toolbar);
         toolbar.setTitle(R.string.app_name);
 
@@ -78,7 +79,12 @@ public class MainActivity extends ActionBarActivity {
     // Test GridPasswordView.clearPassword() in OnPasswordChangedListener.
     // Need enter the password twice and then check the password , like Alipay
     void onPwdChangedTest(){
-        gpvNormalTwice.setOnPasswordChangedListener(new GridPasswordView.OnPasswordChangedListener() {
+        gpvNormalTwice.setOnPasswordChangedListener(new OnPasswordChangedListener() {
+            @Override
+            public boolean beforeInput(int position) {
+                return false;
+            }
+
             @Override
             public void onTextChanged(String psw) {
                 if (psw.length() == 6 && isFirst){
@@ -104,6 +110,6 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ButterKnife.reset(this);
+
     }
 }

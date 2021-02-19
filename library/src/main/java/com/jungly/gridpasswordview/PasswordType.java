@@ -7,6 +7,6 @@ package com.jungly.gridpasswordview;
  */
 public enum PasswordType {
 
-    NUMBER, TEXT, TEXTVISIBLE, TEXTWEB;
+    NUMBER, TEXT, TEXTVISIBLE, TEXTWEB,NULL;
 
 }

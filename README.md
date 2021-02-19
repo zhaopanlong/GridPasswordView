@@ -1,4 +1,7 @@
 # GridPasswordView
+
+ 借鉴这个项目是为了写自己的 platenum项目
+
 [ ![Download](https://api.bintray.com/packages/jungerr/maven/gridPasswordView/images/download.svg) ](https://bintray.com/jungerr/maven/gridPasswordView/_latestVersion)
 
 An android password view that looks like the pay password view in wechat app and alipay app.
@@ -66,18 +69,18 @@ License
 ---
 
     Copyright 2015 jungly
-
+    
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
-
+    
        http://www.apache.org/licenses/LICENSE-2.0
-
+    
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
 
-  [1]: http://jungerr.qiniudn.com/gridpasswordview_0.2.gif
-  [2]: https://github.com/Jungerr/GridPasswordView/blob/master/demo/demo-0.3.apk
+[1]: http://jungerr.qiniudn.com/gridpasswordview_0.2.gif
+[2]: https://github.com/Jungerr/GridPasswordView/blob/master/demo/demo-0.3.apk

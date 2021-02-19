@@ -19,7 +19,12 @@ interface PasswordView {
 
     void togglePasswordVisibility();
 
-    void setOnPasswordChangedListener(GridPasswordView.OnPasswordChangedListener listener);
+    void setOnPasswordChangedListener(OnPasswordChangedListener listener);
 
     void setPasswordType(PasswordType passwordType);
+
+    void appendPassword(String password);
+
+    void deletePassword();
+
 }

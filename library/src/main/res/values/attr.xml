@@ -9,7 +9,11 @@
         <attr name="gpvLineColor" format="color" />
         <attr name="gpvGridColor" format="color" />
         <attr name="gpvLineWidth" format="dimension" />
-
+        <attr name="etwidth" format="dimension" />
+        <attr name="itemMargin" format="dimension" />
+        <attr name="passwordLength" format="integer" />
+        <attr name="borderColor" format="color" />
+        <attr name="borderActiveColor" format="color" />
         <attr name="gpvPasswordLength" format="integer" />
         <attr name="gpvPasswordTransformation" format="string" />
 

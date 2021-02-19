@@ -22,6 +22,8 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.jakewharton:butterknife:6.0.0'
-    compile 'com.jungly:gridPasswordView:0.3'
+    compile 'com.jakewharton:butterknife:8.0.0'
+    //compile 'com.jungly:gridPasswordView:0.3'
+    annotationProcessor "com.jakewharton:butterknife-compiler:8.0.0"
+    implementation project(path: ':library')
 }
